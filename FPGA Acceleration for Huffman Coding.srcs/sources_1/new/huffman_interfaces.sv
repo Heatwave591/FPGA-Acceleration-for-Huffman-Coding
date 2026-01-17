@@ -20,7 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module huffman_interfaces(
+interface huffman_stream_if (input logic clk);
+    logic [31:0] data;
+    logic valid;
+    logic ready;
 
-    );
-endmodule
+    modport source (output data, valid, input ready);
+    modport sink   (input data, valid, output ready);
+endinterface
