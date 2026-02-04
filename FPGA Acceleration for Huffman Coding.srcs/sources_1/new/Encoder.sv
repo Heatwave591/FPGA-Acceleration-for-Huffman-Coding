@@ -9,15 +9,16 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: Huffman Encoder with variable-length bit packing
+// Description: 
 // 
 // Dependencies: 
 // 
 // Revision:
-// Revision 1.00 - Fixed multiple drivers, reset, and handshake logic
+// Revision 0.01 - File Created
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+
 
 module huffman_encoder (
     input logic clk,
