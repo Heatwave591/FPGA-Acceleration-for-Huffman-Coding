@@ -2,3 +2,6 @@ Running: xsim.dir/huffman_encoder_tb_behav/xsimk.exe -simmode gui -wdb huffman_e
 Design successfully loaded
 Design Loading Memory Usage: 10856 KB (Peak: 10856 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 11776 KB (Peak: 11776 KB)
+Simulation CPU Usage: 30 ms
