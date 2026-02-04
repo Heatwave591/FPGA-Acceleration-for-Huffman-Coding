@@ -1,16 +1,17 @@
 Vivado Simulator v2025.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: A:/Vivado/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot huffman_encoder_behav xil_defaultlib.huffman_encoder xil_defaultlib.glbl -log elaborate.log 
+Running: A:/Vivado/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot huffman_encoder_tb_behav xil_defaultlib.huffman_encoder_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3818] variable 'bit_count' is driven by invalid combination of procedural drivers [A:/College/FPGA-Acceleration-for-Huffman-Coding/FPGA Acceleration for Huffman Coding.srcs/sources_1/new/huffman_encoder.sv:61]
-WARNING: [VRFC 10-2921] 'bit_count' driven by this always_ff block should not be driven by any other process [A:/College/FPGA-Acceleration-for-Huffman-Coding/FPGA Acceleration for Huffman Coding.srcs/sources_1/new/huffman_encoder.sv:44]
+WARNING: [VRFC 10-3818] variable 'bit_count' is driven by invalid combination of procedural drivers [A:/College/FPGA-Acceleration-for-Huffman-Coding/FPGA Acceleration for Huffman Coding.srcs/sources_1/new/Encoder.sv:62]
+WARNING: [VRFC 10-2921] 'bit_count' driven by this always_ff block should not be driven by any other process [A:/College/FPGA-Acceleration-for-Huffman-Coding/FPGA Acceleration for Huffman Coding.srcs/sources_1/new/Encoder.sv:45]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.huffman_encoder
+Compiling module xil_defaultlib.huffman_encoder_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot huffman_encoder_behav
+Built simulation snapshot huffman_encoder_tb_behav
