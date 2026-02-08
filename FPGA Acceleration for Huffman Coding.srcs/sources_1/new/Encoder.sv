@@ -66,6 +66,8 @@ logic [19:0] code_table [255:0];        // Defining LUT and writing into it
     
     
     // This is the control logic. Assining valid if stream is ready or if there is space is available
+    // Check workflow picture in the github repo
+    
     assign symbol_ready = (bit_count < 32) || stream_ready;
     assign stream_valid = (bit_count >= 32);    // stream is valid if thr no of bits is more than 32
     assign stream_out   = accumulator[31:0];    // needed o/p is last 32 bits of accumulator
