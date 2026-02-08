@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Feb  8 17:22:47 2026
+# Process ID         : 7188
+# Current directory  : A:/College/FPGA-Acceleration-for-Huffman-Coding/Hardware Design/Hardware_Acceleration_Encoding
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent3720 A:\College\FPGA-Acceleration-for-Huffman-Coding\Hardware Design\Hardware_Acceleration_Encoding\Hardware_Acceleration_Encoding.xpr
+# Log file           : A:/College/FPGA-Acceleration-for-Huffman-Coding/Hardware Design/Hardware_Acceleration_Encoding/vivado.log
+# Journal file       : A:/College/FPGA-Acceleration-for-Huffman-Coding/Hardware Design/Hardware_Acceleration_Encoding\vivado.jou
+# Running On         : Sora
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 275HX
+# CPU Frequency      : 3072 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 24
+# Host memory        : 33752 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 35900 MB
+# Available Virtual  : 22294 MB
+#-----------------------------------------------------------
+start_gui
+open_project {A:/College/FPGA-Acceleration-for-Huffman-Coding/Hardware Design/Hardware_Acceleration_Encoding/Hardware_Acceleration_Encoding.xpr}
+launch_simulation
+source huffman_encoder_tb.tcl
+close_sim

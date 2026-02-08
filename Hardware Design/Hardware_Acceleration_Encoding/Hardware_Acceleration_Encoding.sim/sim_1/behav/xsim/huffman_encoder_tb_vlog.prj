@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef" \
+"../../../../Hardware_Acceleration_Encoding.srcs/sources_1/new/huffman_interfaces.sv" \
+"../../../../Hardware_Acceleration_Encoding.srcs/sources_1/new/Encoder.sv" \
+"../../../../Hardware_Acceleration_Encoding.srcs/sim_1/new/huffman_encoder_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
