@@ -42,18 +42,18 @@ module huffman_encoder (
 
 logic [19:0] code_table [255:0];        // Defining LUT and writing into it
 
-    always_ff @(posedge clk)
-    begin
+initial begin
+    integer i;
+    for (i = 0; i < 256; i = i + 1)
+        code_table[i] = 20'd0;
+end
+
+always_ff @(posedge clk) begin
     if (wr_en) begin
         code_table[addr_config] <= data_config;
     end
-        
-    if (!rst)
-    begin
-        bit_count <= 6'd0;
-    end
+end
 
-    end
     
     
     
@@ -82,9 +82,9 @@ logic [19:0] code_table [255:0];        // Defining LUT and writing into it
         else begin
             if(stream_valid && stream_ready)
             begin
-                if(stream_valid && symbol_ready)
+                if(symbol_valid && symbol_ready)
                 begin
-                    accumulator <= (accumulator >> 32)|(64'(current_code) << (bit_count - 32));
+                    accumulator <= (accumulator >> 32)|({48'd0, current_code} << (bit_count - 32));
                     bit_count   <= (bit_count - 32) + current_len;
                 end 
                else begin
@@ -95,7 +95,8 @@ logic [19:0] code_table [255:0];        // Defining LUT and writing into it
             
        else if (symbol_valid && symbol_ready)
        begin
-            accumulator <= accumulator|(64'(current_code) << bit_count);
+            accumulator <= accumulator |
+              ({48'd0, (current_code & ((1 << current_len) - 1))} << bit_count);
             bit_count   <= bit_count + current_len;
        end
        end

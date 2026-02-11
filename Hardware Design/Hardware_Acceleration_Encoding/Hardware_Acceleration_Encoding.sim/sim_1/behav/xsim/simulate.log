@@ -2,3 +2,5 @@ Time resolution is 1 ps
 --- Starting Configuration ---
 --- Configuration Done ---
 --- Testing Backpressure ---
+--- Test Completed ---
+$finish called at time : 445 ns : File "A:/College/FPGA-Acceleration-for-Huffman-Coding/Hardware Design/Hardware_Acceleration_Encoding/Hardware_Acceleration_Encoding.srcs/sim_1/new/huffman_encoder_tb.sv" Line 139
