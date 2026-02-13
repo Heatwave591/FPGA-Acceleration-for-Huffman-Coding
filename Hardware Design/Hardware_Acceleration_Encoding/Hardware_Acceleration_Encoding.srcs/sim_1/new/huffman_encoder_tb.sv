@@ -156,19 +156,18 @@ module huffman_encoder_tb;
     // ------------------------------------------------
     // Helper Task: Send a Symbol to Stream
     // ------------------------------------------------
-    task send_symbol(input [7:0] sym);
-        begin
-            // Wait until DUT is ready to accept data
-            wait(symbol_ready);
-            
-            @(posedge clk);
-            symbol_valid = 1;
-            symbol_in = sym;
-            
-            @(posedge clk);
-            symbol_valid = 0;
-            symbol_in = 0; // Clean up
-        end
-    endtask
+task send_symbol(input [7:0] sym);
+begin
+    wait(symbol_ready);
+
+    @(posedge clk);
+    symbol_in    = sym;
+    symbol_valid = 1;
+
+    @(posedge clk);
+    symbol_valid = 0;
+end
+endtask
+
 
 endmodule

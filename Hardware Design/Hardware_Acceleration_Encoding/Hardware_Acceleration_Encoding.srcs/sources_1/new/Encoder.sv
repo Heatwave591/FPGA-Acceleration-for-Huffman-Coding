@@ -73,32 +73,34 @@ end
     assign stream_out   = accumulator[31:0];    // needed o/p is last 32 bits of accumulator
     
     
-    always_ff @(posedge clk) begin
-        if (!rst) begin                         // Note that I have used actuiive low reset
-            accumulator <= 64'd0;
-            bit_count   <= 6'd0;
-        end 
-        
-        else begin
-            if(stream_valid && stream_ready)
-            begin
-                if(symbol_valid && symbol_ready)
-                begin
-                    accumulator <= (accumulator >> 32)|({48'd0, current_code} << (bit_count - 32));
-                    bit_count   <= (bit_count - 32) + current_len;
-                end 
-               else begin
-                    accumulator <= accumulator >> 32;
-                    bit_count <= bit_count - 32;
-               end
-            end
-            
-       else if (symbol_valid && symbol_ready)
-       begin
-            accumulator <= accumulator |
-              ({48'd0, (current_code & ((1 << current_len) - 1))} << bit_count);
-            bit_count   <= bit_count + current_len;
-       end
-       end
-       end
+always_ff @(posedge clk) begin
+    if (!rst) begin
+        accumulator <= 0;
+        bit_count   <= 0;
+    end else begin
+
+        logic [63:0] next_acc;
+        logic [5:0]  next_count;
+
+        next_acc   = accumulator;
+        next_count = bit_count;
+
+        // Flush
+        if (stream_valid && stream_ready) begin
+            next_acc   = next_acc >> 32;
+            next_count = next_count - 32;
+        end
+
+        // Accumulate
+        if (symbol_valid && symbol_ready) begin
+            next_acc   = next_acc |
+                         ({48'd0,
+                          (current_code & ((1 << current_len) - 1))} << next_count);
+            next_count = next_count + current_len;
+        end
+
+        accumulator <= next_acc;
+        bit_count   <= next_count;
+    end
+end
 endmodule
