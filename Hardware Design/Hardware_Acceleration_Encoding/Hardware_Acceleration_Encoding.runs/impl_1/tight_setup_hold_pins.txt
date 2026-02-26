@@ -1,0 +1,37 @@
++====================+===================+=======================+
+| Launch Setup Clock | Launch Hold Clock | Pin                   |
++====================+===================+=======================+
+| clk                | clk               | accumulator_reg[15]/D |
+| clk                | clk               | accumulator_reg[39]/D |
+| clk                | clk               | accumulator_reg[43]/D |
+| clk                | clk               | accumulator_reg[31]/D |
+| clk                | clk               | accumulator_reg[23]/D |
+| clk                | clk               | accumulator_reg[24]/D |
+| clk                | clk               | accumulator_reg[32]/D |
+| clk                | clk               | accumulator_reg[41]/D |
+| clk                | clk               | accumulator_reg[21]/D |
+| clk                | clk               | accumulator_reg[33]/D |
+| clk                | clk               | accumulator_reg[16]/D |
+| clk                | clk               | accumulator_reg[42]/D |
+| clk                | clk               | accumulator_reg[29]/D |
+| clk                | clk               | accumulator_reg[34]/D |
+| clk                | clk               | accumulator_reg[38]/D |
+| clk                | clk               | accumulator_reg[6]/D  |
+| clk                | clk               | accumulator_reg[17]/D |
+| clk                | clk               | accumulator_reg[30]/D |
+| clk                | clk               | accumulator_reg[40]/D |
+| clk                | clk               | accumulator_reg[13]/D |
+| clk                | clk               | accumulator_reg[37]/D |
+| clk                | clk               | accumulator_reg[35]/D |
+| clk                | clk               | accumulator_reg[19]/D |
+| clk                | clk               | accumulator_reg[27]/D |
+| clk                | clk               | accumulator_reg[44]/D |
+| clk                | clk               | accumulator_reg[46]/D |
+| clk                | clk               | accumulator_reg[11]/D |
+| clk                | clk               | accumulator_reg[3]/D  |
+| clk                | clk               | accumulator_reg[4]/D  |
+| clk                | clk               | accumulator_reg[45]/D |
+| clk                | clk               | accumulator_reg[2]/D  |
+| clk                | clk               | accumulator_reg[7]/D  |
+| clk                | clk               | bit_count_reg[5]/D    |
++--------------------+-------------------+-----------------------+
