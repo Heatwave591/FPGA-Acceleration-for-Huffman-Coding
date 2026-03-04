@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1771984756" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/huffman_encoder.dcp">
-  <File Type="PA-TCL" Name="huffman_encoder.tcl"/>
   <File Type="REPORTS-TCL" Name="huffman_encoder_reports.tcl"/>
-  <File Type="RDS-RDS" Name="huffman_encoder.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="huffman_encoder_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="huffman_encoder_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="huffman_encoder_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="huffman_encoder.tcl"/>
+  <File Type="RDS-RDS" Name="huffman_encoder.vds"/>
   <File Type="RDS-DCP" Name="huffman_encoder.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="huffman_encoder_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="huffman_encoder_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/huffman_interfaces.sv">

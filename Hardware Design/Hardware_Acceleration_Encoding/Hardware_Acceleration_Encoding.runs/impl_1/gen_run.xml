@@ -1,100 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1771984791">
-  <File Type="ROUTE-PWR" Name="huffman_encoder_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="huffman_encoder.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="huffman_encoder_power_summary_routed.pb"/>
-  <File Type="OPT-RQA-PB" Name="huffman_encoder_rqa_opted.pb"/>
   <File Type="REPORTS-TCL" Name="huffman_encoder_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="huffman_encoder_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="huffman_encoder_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="huffman_encoder_power_summary_routed.pb"/>
+  <File Type="BITSTR-MMI" Name="huffman_encoder.mmi"/>
   <File Type="OPT-DRC" Name="huffman_encoder_drc_opted.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="huffman_encoder_routed_bb.dcp"/>
-  <File Type="OPT-UTIL" Name="huffman_encoder_utilization_opted.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="huffman_encoder_timing_summary_routed.pb"/>
-  <File Type="OPT-UTIL-PB" Name="huffman_encoder_utilization_opted.pb"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="huffman_encoder_methodology_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="huffman_encoder.hwdef"/>
-  <File Type="OPT-TIMING" Name="huffman_encoder_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="huffman_encoder_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="huffman_encoder_drc_pwropted.rpt"/>
-  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="huffman_encoder.nts"/>
-  <File Type="PWROPT-TIMING" Name="huffman_encoder_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="huffman_encoder_placed.dcp"/>
-  <File Type="PLACE-IO" Name="huffman_encoder_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="huffman_encoder_clock_utilization_placed.rpt"/>
+  <File Type="BG-DRC" Name="huffman_encoder.drc"/>
+  <File Type="ROUTE-STATUS-PB" Name="huffman_encoder_route_status.pb"/>
+  <File Type="BG-BGN" Name="huffman_encoder.bgn"/>
   <File Type="PLACE-UTIL" Name="huffman_encoder_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="huffman_encoder_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="huffman_encoder_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="huffman_encoder_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="huffman_encoder_incremental_reuse_pre_placed.rpt"/>
-  <File Type="NOC_SOLUTION_FILE" Name="huffman_encoder.ncr"/>
-  <File Type="PLACE-TIMING" Name="huffman_encoder_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="huffman_encoder_power_routed.rpx"/>
-  <File Type="PLACE-RQA-PB" Name="huffman_encoder_rqa_placed.pb"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="huffman_encoder_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="huffman_encoder_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="huffman_encoder_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="huffman_encoder_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="huffman_encoder_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-UTIL" Name="huffman_encoder_utilization_routed.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="huffman_encoder_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="huffman_encoder_routed.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="huffman_encoder_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-UTIL-PB" Name="huffman_encoder_utilization_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="huffman_encoder_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="huffman_encoder_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="huffman_encoder_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="huffman_encoder_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="huffman_encoder_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="huffman_encoder_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-RQS-PB" Name="huffman_encoder_rqs_routed.pb"/>
-  <File Type="ROUTE-STATUS" Name="huffman_encoder_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="huffman_encoder_route_status.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="huffman_encoder_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="huffman_encoder_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="huffman_encoder_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="huffman_encoder_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="huffman_encoder_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="huffman_encoder_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="huffman_encoder_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="huffman_encoder_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="huffman_encoder_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="huffman_encoder_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="huffman_encoder_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="huffman_encoder_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="huffman_encoder_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="huffman_encoder_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="huffman_encoder.bit"/>
+  <File Type="PLACE-IO" Name="huffman_encoder_io_placed.rpt"/>
   <File Type="BG-BIN" Name="huffman_encoder.bin"/>
+  <File Type="PLACE-CTRL" Name="huffman_encoder_control_sets_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="huffman_encoder_power_routed.rpx"/>
   <File Type="BITSTR-MSK" Name="huffman_encoder.msk"/>
   <File Type="BITSTR-RBT" Name="huffman_encoder.rbt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="huffman_encoder_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="huffman_encoder_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="huffman_encoder_route_status.rpt"/>
+  <File Type="PA-TCL" Name="huffman_encoder.tcl"/>
+  <File Type="ROUTE-PWR" Name="huffman_encoder_power_routed.rpt"/>
+  <File Type="ROUTE-DRC" Name="huffman_encoder_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="huffman_encoder_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="huffman_encoder_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="huffman_encoder.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="huffman_encoder_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="huffman_encoder_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="huffman_encoder.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="huffman_encoder_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-SIMILARITY" Name="huffman_encoder_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="huffman_encoder.vdi"/>
+  <File Type="ROUTE-CLK" Name="huffman_encoder_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="huffman_encoder_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="huffman_encoder_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="huffman_encoder_bus_skew_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="huffman_encoder_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="huffman_encoder_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="huffman_encoder_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="huffman_encoder_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="huffman_encoder_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="huffman_encoder.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="huffman_encoder_bus_skew_postroute_physopted.pb"/>
   <File Type="BITSTR-NKY" Name="huffman_encoder.nky"/>
   <File Type="BITSTR-BMM" Name="huffman_encoder_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="huffman_encoder.mmi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="huffman_encoder.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="huffman_encoder_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="huffman_encoder_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="huffman_encoder_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="huffman_encoder_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="huffman_encoder_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="huffman_encoder_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="huffman_encoder_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="huffman_encoder_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="huffman_encoder_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="huffman_encoder_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="huffman_encoder_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="huffman_encoder_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="huffman_encoder.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="huffman_encoder_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="huffman_encoder_pld.pdi"/>
   <File Type="RCFI_FILE" Name="huffman_encoder.rcfi"/>
   <File Type="CFI_FILE" Name="huffman_encoder.cfi"/>
   <File Type="RNPI_FILE" Name="huffman_encoder.rnpi"/>
-  <File Type="RCDO-FILE" Name="huffman_encoder.rcdo"/>
-  <File Type="MARKER-RNPI-FILE" Name="huffman_encoder_markers.rnpi"/>
-  <File Type="MARKER-RCDO-FILE" Name="huffman_encoder_markers.rcdo"/>
-  <File Type="BOOT_RNPI_FILE" Name="huffman_encoder_boot.rnpi"/>
-  <File Type="BOOT_MARKER_RNPI_FILE" Name="huffman_encoder_boot_markers.rnpi"/>
-  <File Type="PL_RNPI_FILE" Name="huffman_encoder_pld.rnpi"/>
-  <File Type="PL_MARKER_RNPI_FILE" Name="huffman_encoder_pld_markers.rnpi"/>
-  <File Type="PL_MASK_RNPI_FILE" Name="huffman_encoder_pld_mask.rnpi"/>
-  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="huffman_encoder_pld_shutdown.rnpi"/>
-  <File Type="PL_UNMASK_RNPI_FILE" Name="huffman_encoder_pld_unmask.rnpi"/>
-  <File Type="PL-RCDO-FILE" Name="huffman_encoder_pld.rcdo"/>
-  <File Type="PL-CLEAR-RCDO-FILE" Name="huffman_encoder_pld_clear.rcdo"/>
-  <File Type="PL_MARKER_RCDO_FILE" Name="huffman_encoder_pld_markers.rcdo"/>
-  <File Type="PL_MASK_RCDO_FILE" Name="huffman_encoder_pld_mask.rcdo"/>
-  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="huffman_encoder_pld_unmask_markers.rcdo"/>
-  <File Type="PL_UNMASK_RCDO_FILE" Name="huffman_encoder_pld_unmask.rcdo"/>
   <File Type="NPI_FILE" Name="huffman_encoder.npi"/>
   <File Type="RBD_FILE" Name="huffman_encoder.rbd"/>
+  <File Type="ROUTE-RQS" Name="huffman_encoder_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="huffman_encoder_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="MMI-FILE" Name="huffman_encoder.mmi"/>
   <File Type="BIF-FILE" Name="huffman_encoder.bif"/>
   <File Type="BOOT-BIF-FILE" Name="huffman_encoder_boot.bif"/>
@@ -102,17 +77,24 @@
   <File Type="LTX-FILE" Name="huffman_encoder.ltx"/>
   <File Type="BOOT-LTX-FILE" Name="huffman_encoder_boot.ltx"/>
   <File Type="PL-LTX-FILE" Name="huffman_encoder_pld.ltx"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="huffman_encoder.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="huffman_encoder.sysdef"/>
-  <File Type="BG-BGN" Name="huffman_encoder.bgn"/>
-  <File Type="BG-DRC" Name="huffman_encoder.drc"/>
-  <File Type="RDI-RDI" Name="huffman_encoder.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="huffman_encoder_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="huffman_encoder_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="RCDO-FILE" Name="huffman_encoder.rcdo"/>
+  <File Type="MARKER-RCDO-FILE" Name="huffman_encoder_markers.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="huffman_encoder_pld.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="huffman_encoder_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="huffman_encoder_boot.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="huffman_encoder_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="huffman_encoder_boot_markers.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="huffman_encoder_pld_markers.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="huffman_encoder_pld_mask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="huffman_encoder_pld_shutdown.rnpi"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="huffman_encoder_pld_unmask.rnpi"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="huffman_encoder_pld_clear.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="huffman_encoder_pld_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="huffman_encoder_pld_mask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="huffman_encoder_pld_unmask_markers.rcdo"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="huffman_encoder_pld_unmask.rcdo"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="huffman_encoder.nts"/>
+  <File Type="NOC_SOLUTION_FILE" Name="huffman_encoder.ncr"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/huffman_interfaces.sv">
@@ -173,5 +155,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
