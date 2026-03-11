@@ -38,7 +38,7 @@ always #5 clk = ~clk;
 // Encoder
 // -----------------------
 
-Encoder encoder (
+huffman_encoder encoder (
 
     .clk(clk),
     .rst(rst),
