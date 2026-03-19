@@ -58,8 +58,8 @@ end
     
     
     logic [63:0] accumulator;
-    
-    (* mark_debug = "true" *) logic [5:0] bit_count;
+   
+    logic [5:0] bit_count;
     logic[15:0] current_code;
     logic[3:0] current_len;
     assign {current_len, current_code} = code_table[symbol_in];
@@ -71,34 +71,36 @@ end
     assign symbol_ready = (bit_count < 32) || stream_ready;
     assign stream_valid = (bit_count >= 32);    // stream is valid if thr no of bits is more than 32
     assign stream_out   = accumulator[31:0];    // needed o/p is last 32 bits of accumulator
-    
-    
+
+    logic [63:0] next_acc;
+    logic [5:0]  next_count;
+
+// Combinational: compute next state
+always_comb begin
+    next_acc   = accumulator;
+    next_count = bit_count;
+
+    // Flush
+    if (stream_valid && stream_ready) begin
+        next_acc   = next_acc >> 32;
+        next_count = next_count - 32;
+    end
+
+    // Accumulate
+    if (symbol_valid && symbol_ready) begin
+        next_acc   = next_acc |
+                     ({48'd0,
+                      (current_code & ((1 << current_len) - 1))} << next_count);
+        next_count = next_count + current_len;
+    end
+end
+
+// Sequential: register update
 always_ff @(posedge clk) begin
     if (!rst) begin
         accumulator <= 0;
         bit_count   <= 0;
     end else begin
-
-        logic [63:0] next_acc;
-        logic [5:0]  next_count;
-
-        next_acc   = accumulator;
-        next_count = bit_count;
-
-        // Flush
-        if (stream_valid && stream_ready) begin
-            next_acc   = next_acc >> 32;
-            next_count = next_count - 32;
-        end
-
-        // Accumulate
-        if (symbol_valid && symbol_ready) begin
-            next_acc   = next_acc |
-                         ({48'd0,
-                          (current_code & ((1 << current_len) - 1))} << next_count);
-            next_count = next_count + current_len;
-        end
-
         accumulator <= next_acc;
         bit_count   <= next_count;
     end

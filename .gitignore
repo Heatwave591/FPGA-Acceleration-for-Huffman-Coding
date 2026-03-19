@@ -1,0 +1,13 @@
+# Claude Code
+.claude/
+
+# Vivado simulation artifacts
+Hardware Design/**/*.wdb
+Hardware Design/**/*.log
+Hardware Design/**/*.jou
+Hardware Design/**/xsim.dir/
+Hardware Design/**/*.pb
+Hardware Design/**/*.obj
+Hardware Design/**/*.exe
+Hardware Design/**/*.c
+Hardware Design/**/*.bat
