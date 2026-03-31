@@ -5,10 +5,7 @@ module system_tb;
 logic clk;
 logic rst;
 
-// -----------------------
-// Encoder interface
-// -----------------------
-
+// Encoder interfacign
 logic [7:0]  symbol_in;
 logic        symbol_valid;
 logic        symbol_ready;
@@ -22,10 +19,10 @@ logic        enc_wr_en;
 logic [7:0]  enc_addr_config;
 logic [19:0] enc_data_config;
 
-// -----------------------
-// Decoder interface
-// -----------------------
 
+
+
+// Decoder interfacing
 logic [7:0]  symbol_out;
 logic        symbol_valid_out;
 logic        symbol_ready_out;
@@ -37,20 +34,14 @@ logic [7:0]  dec_addr_config;
 logic [15:0] dec_data_config;
 
 
-// -----------------------
-// Clock
-// -----------------------
+
 
 initial clk = 0;
 always #5 clk = ~clk;
 
 
-// -----------------------
 // Encoder
-// -----------------------
-
 huffman_encoder encoder (
-
     .clk(clk),
     .rst(rst),
 
@@ -68,12 +59,8 @@ huffman_encoder encoder (
 );
 
 
-// -----------------------
 // Decoder
-// -----------------------
-
 Decoder decoder (
-
     .clk(clk),
     .rst(rst),
 
@@ -92,17 +79,14 @@ Decoder decoder (
 );
 
 
-// -----------------------
-// Test
-// -----------------------
-
+// Testing 
 initial begin
 
-    rst              = 0;
-    symbol_valid     = 0;
+    rst = 0;
+    symbol_valid = 0;
     symbol_ready_out = 1;
-    enc_wr_en        = 0;
-    dec_wr_en        = 0;
+    enc_wr_en = 0;
+    dec_wr_en = 0;
 
     #20;
     rst = 1;
@@ -188,7 +172,7 @@ begin
 
     @(posedge clk);
     dec_addr_config = 8'd2;
-    dec_data_config = 16'd2;        // first_code[2] = 2  (A = 0b10)
+    dec_data_config = 16'h8000;     // first_code[2] = 0x8000  (A = 0b10, left-justified)
 
     // Remaining lengths: set to 0xFFFF so they never match
     for (i = 3; i <= 16; i = i + 1) begin

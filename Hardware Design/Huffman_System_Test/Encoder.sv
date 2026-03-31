@@ -69,8 +69,8 @@ end
     // Check workflow picture in the github repo
     
     assign symbol_ready = (bit_count < 32) || stream_ready;
-    assign stream_valid = (bit_count >= 32);    // stream is valid if thr no of bits is more than 32
-    assign stream_out   = accumulator[31:0];    // needed o/p is last 32 bits of accumulator
+    assign stream_valid = (bit_count >= 32);
+    assign stream_out   = accumulator[63:32];   // MSB-first: output upper 32 bits
 
     logic [63:0] next_acc;
     logic [5:0]  next_count;
@@ -80,17 +80,18 @@ always_comb begin
     next_acc   = accumulator;
     next_count = bit_count;
 
-    // Flush
+    // Flush: shift out the upper 32 bits that were just output
     if (stream_valid && stream_ready) begin
-        next_acc   = next_acc >> 32;
+        next_acc   = next_acc << 32;
         next_count = next_count - 32;
     end
 
-    // Accumulate
+    // Accumulate: pack MSB-first into the top of the accumulator
     if (symbol_valid && symbol_ready) begin
         next_acc   = next_acc |
                      ({48'd0,
-                      (current_code & ((1 << current_len) - 1))} << next_count);
+                      (current_code & ((1 << current_len) - 1))}
+                      << (64 - next_count - current_len));
         next_count = next_count + current_len;
     end
 end

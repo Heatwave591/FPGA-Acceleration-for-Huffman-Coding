@@ -95,7 +95,7 @@ module Decoder (
     // ------------------------------------------------
 
     logic [15:0] peek;
-    assign peek = bit_window[63:48];
+    assign peek = bit_window[63:48];    // MSB-first: read from top of window
 
     // ------------------------------------------------
     // Length Detection
@@ -119,7 +119,7 @@ module Decoder (
 
     logic [15:0] index;
 
-    assign index = base[length] + (peek - first_code[length]);
+    assign index = base[length] + ((peek - first_code[length]) >> (16 - length));
 
     assign symbol_out = symbol_table[index];
 
@@ -134,6 +134,26 @@ module Decoder (
     // Main Decoder Logic
     // ------------------------------------------------
 
+    logic [63:0] next_window;
+    logic [6:0]  next_count;
+
+    always_comb begin
+        next_window = bit_window;
+        next_count  = bit_count;
+
+        // Load bits: place MSB-aligned so peek sees them at [63:48]
+        if(stream_valid && stream_ready) begin
+            next_window = next_window | (64'(stream_in) << (32 - next_count));
+            next_count  = next_count + 32;
+        end
+
+        // Output symbol: consume from MSB side
+        if(symbol_valid && symbol_ready) begin
+            next_window = next_window << length;
+            next_count  = next_count - length;
+        end
+    end
+
     always_ff @(posedge clk) begin
 
         if(!rst) begin
@@ -142,19 +162,8 @@ module Decoder (
         end
 
         else begin
-
-            // Load bits
-            if(stream_valid && stream_ready) begin
-                bit_window <= bit_window | (64'(stream_in) << bit_count);
-                bit_count  <= bit_count + 32;
-            end
-
-            // Output symbol
-            if(symbol_valid && symbol_ready) begin
-                bit_window <= bit_window << length;
-                bit_count  <= bit_count - length;
-            end
-
+            bit_window <= next_window;
+            bit_count  <= next_count;
         end
 
     end
