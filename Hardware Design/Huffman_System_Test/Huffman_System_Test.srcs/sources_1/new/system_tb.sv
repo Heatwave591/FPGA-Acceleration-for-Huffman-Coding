@@ -192,6 +192,8 @@ begin
     dec_addr_config = 8'd2;
     dec_data_config = 16'd1;        // base[2] = 1  (A at index 1, C at index 2)
 
+    @(posedge clk);                 // extra clock to let base[2] write complete
+
     // --- symbol_table ---
     dec_table_sel = 2'd2;
 
