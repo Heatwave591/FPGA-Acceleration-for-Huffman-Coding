@@ -5,7 +5,7 @@ module system_tb;
 logic clk;
 logic rst;
 
-// Encoder interfacign
+// Encoder interfacing
 logic [7:0]  symbol_in;
 logic        symbol_valid;
 logic        symbol_ready;
@@ -19,9 +19,6 @@ logic        enc_wr_en;
 logic [7:0]  enc_addr_config;
 logic [19:0] enc_data_config;
 
-
-
-
 // Decoder interfacing
 logic [7:0]  symbol_out;
 logic        symbol_valid_out;
@@ -32,8 +29,6 @@ logic        dec_wr_en;
 logic [1:0]  dec_table_sel;
 logic [7:0]  dec_addr_config;
 logic [15:0] dec_data_config;
-
-
 
 
 initial clk = 0;
@@ -79,162 +74,80 @@ Decoder decoder (
 );
 
 
-// Testing 
+// ── Auto-generated Huffman config tasks (run compute_huffman.py to regenerate)
+`include "huffman_tables.svh"
+
+
+// ── Send one byte through the encoder ────────────────────────────────────────
+task send_byte(input [7:0] b);
+begin
+    @(posedge clk);
+    symbol_in    = b;
+    symbol_valid = 1;
+    wait(symbol_ready);
+    @(posedge clk);
+    symbol_valid = 0;
+end
+endtask
+
+
+// ── Main test sequence ────────────────────────────────────────────────────────
 initial begin
 
-    rst = 0;
-    symbol_valid = 0;
+    // Initialise
+    rst            = 0;
+    symbol_valid   = 0;
     symbol_ready_out = 1;
-    enc_wr_en = 0;
-    dec_wr_en = 0;
+    enc_wr_en      = 0;
+    dec_wr_en      = 0;
 
     #20;
     rst = 1;
 
-    // Load Huffman tables into encoder and decoder
-    config_encoder();
-    config_decoder();
+    // Load 256-entry Huffman tables into encoder and decoder
+    // (config_encoder_full and config_decoder_full come from huffman_tables.svh)
+    config_encoder_full();
+    config_decoder_full();
 
-    // Send enough symbols to fill 32-bit stream word
-    // A=2bits, B=1bit, C=2bits → 5 bits per triple → 7 triples = 35 bits
-    repeat(7) begin
-        send_symbol("A");
-        send_symbol("B");
-        send_symbol("C");
-    end
+    // ── Test vector: gradient-like byte sequence ──────────────────────────
+    // Simulates a small bfloat16 gradient chunk:
+    //   many zero bytes (sparse gradient), a few small-value exponent bytes.
+    // After round-trip through encoder → decoder, symbol_out must reproduce
+    // the same sequence in order.
+    //
+    //  0x00 = zero byte      (very common in sparse gradients)
+    //  0x3F = small +ve bf16 exponent
+    //  0xBF = small -ve bf16 exponent
+    //  0x80 = negative zero
+    //  0x40 = slightly larger +ve
+    //
+    send_byte(8'h00);
+    send_byte(8'h00);
+    send_byte(8'h00);
+    send_byte(8'h3F);   // small positive value
+    send_byte(8'h80);
+    send_byte(8'h00);
+    send_byte(8'h00);
+    send_byte(8'hBF);   // small negative value
+    send_byte(8'h00);
+    send_byte(8'h00);
+    send_byte(8'h40);   // slightly larger positive
+    send_byte(8'h00);
+    send_byte(8'h00);
+    send_byte(8'h00);
+    send_byte(8'h80);
+    send_byte(8'h00);
+    send_byte(8'h00);
+    send_byte(8'h3F);
+    send_byte(8'h00);
+    send_byte(8'h00);
 
-    #500;
+    repeat(32) send_byte(8'h00);
+    // Wait long enough for the decoder to drain all stream words
+    #10000;
 
     $finish;
 
 end
-
-
-// -----------------------
-// Config encoder
-//
-// Huffman codes:
-//   Symbol | Code | Length
-//   B      | 0    | 1
-//   A      | 10   | 2
-//   C      | 11   | 2
-//
-// data_config format: {length[3:0], code[15:0]}
-// -----------------------
-
-task config_encoder();
-begin
-
-    enc_wr_en = 1;
-
-    @(posedge clk);
-    enc_addr_config = 8'h41;            // 'A'
-    enc_data_config = {4'd2, 16'd2};    // code=0b10, length=2
-
-    @(posedge clk);
-    enc_addr_config = 8'h42;            // 'B'
-    enc_data_config = {4'd1, 16'd0};    // code=0b0,  length=1
-
-    @(posedge clk);
-    enc_addr_config = 8'h43;            // 'C'
-    enc_data_config = {4'd2, 16'd3};    // code=0b11, length=2
-
-    @(posedge clk);
-    enc_wr_en = 0;
-
-end
-endtask
-
-
-// -----------------------
-// Config decoder
-//
-// Canonical Huffman tables:
-//   length | first_code | base | symbols in order
-//   1      | 0          | 0    | B
-//   2      | 2          | 1    | A, C
-//
-// table_sel: 0=first_code, 1=base, 2=symbol_table
-// -----------------------
-
-task config_decoder();
-integer i;
-begin
-
-    dec_wr_en = 1;
-
-    // --- first_code table ---
-    dec_table_sel = 2'd0;
-
-    @(posedge clk);
-    dec_addr_config = 8'd1;
-    dec_data_config = 16'd0;        // first_code[1] = 0  (B)
-
-    @(posedge clk);
-    dec_addr_config = 8'd2;
-    dec_data_config = 16'h8000;     // first_code[2] = 0x8000  (A = 0b10, left-justified)
-
-    // Remaining lengths: set to 0xFFFF so they never match
-    for (i = 3; i <= 16; i = i + 1) begin
-        @(posedge clk);
-        dec_addr_config = 8'(i);
-        dec_data_config = 16'hFFFF;
-    end
-
-    // --- base table ---
-    dec_table_sel = 2'd1;
-
-    @(posedge clk);
-    dec_addr_config = 8'd1;
-    dec_data_config = 16'd0;        // base[1] = 0  (B at index 0)
-
-    @(posedge clk);
-    dec_addr_config = 8'd2;
-    dec_data_config = 16'd1;        // base[2] = 1  (A at index 1, C at index 2)
-
-    @(posedge clk);                 // extra clock to let base[2] write complete
-
-    // --- symbol_table ---
-    dec_table_sel = 2'd2;
-
-    @(posedge clk);
-    dec_addr_config = 8'd0;
-    dec_data_config = 16'h42;       // symbol_table[0] = 'B'
-
-    @(posedge clk);
-    dec_addr_config = 8'd1;
-    dec_data_config = 16'h41;       // symbol_table[1] = 'A'
-
-    @(posedge clk);
-    dec_addr_config = 8'd2;
-    dec_data_config = 16'h43;       // symbol_table[2] = 'C'
-
-    @(posedge clk);
-    dec_wr_en = 0;
-
-end
-endtask
-
-
-// -----------------------
-// Task to send symbols
-// -----------------------
-
-task send_symbol(input [7:0] sym);
-begin
-
-    @(posedge clk);
-
-    symbol_in    = sym;
-    symbol_valid = 1;
-
-    wait(symbol_ready);
-
-    @(posedge clk);
-
-    symbol_valid = 0;
-
-end
-endtask
 
 endmodule

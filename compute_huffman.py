@@ -1,0 +1,221 @@
+#!/usr/bin/env python3
+"""
+compute_huffman.py
+==================
+Computes canonical Huffman codes for a 256-byte alphabet using a
+gradient-like frequency distribution (many zeros, some small bfloat16
+exponent bytes, rare everything else).
+
+Outputs:
+  huffman_tables.svh  — SystemVerilog include file with:
+                          task config_encoder_full()
+                          task config_decoder_full()
+  (also prints a summary to the console)
+
+Run from the project root:
+    python compute_huffman.py
+"""
+
+import heapq, pathlib
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1.  Frequency distribution
+#     Models a bfloat16 gradient tensor: many near-zero values, few large ones.
+# ─────────────────────────────────────────────────────────────────────────────
+FREQS = [10] * 256          # every byte occurs at least 10 times
+
+FREQS[0x00] = 10000         # zero byte — dominant in sparse gradients
+FREQS[0x80] = 1000          # negative-zero in IEEE float
+FREQS[0x3F] = 600           # small +ve bfloat16 (exponent ~0x3F)
+FREQS[0x40] = 400           # slightly larger +ve
+FREQS[0xBF] = 400           # small -ve bfloat16
+FREQS[0xC0] = 300           # slightly larger -ve
+for b in range(0x01, 0x10):
+    FREQS[b] = 60           # near-zero mantissa bytes (common in small values)
+FREQS[0xFF] = 30            # saturation / NaN markers
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2.  Build Huffman tree
+# ─────────────────────────────────────────────────────────────────────────────
+class Node:
+    _cnt = 0
+    __slots__ = ('freq', 'seq', 'sym', 'l', 'r')
+
+    def __init__(self, freq, sym=None, l=None, r=None):
+        self.freq = freq
+        self.sym  = sym
+        self.l    = l
+        self.r    = r
+        self.seq  = Node._cnt
+        Node._cnt += 1
+
+    def __lt__(self, other):
+        # Min-heap: smallest frequency first; break ties by insertion order
+        return (self.freq, self.seq) < (other.freq, other.seq)
+
+heap = [Node(FREQS[b], sym=b) for b in range(256)]
+heapq.heapify(heap)
+
+while len(heap) > 1:
+    a = heapq.heappop(heap)
+    b = heapq.heappop(heap)
+    heapq.heappush(heap, Node(a.freq + b.freq, l=a, r=b))
+
+root = heap[0]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 3.  Assign code lengths by walking the tree
+# ─────────────────────────────────────────────────────────────────────────────
+raw_len = {}
+
+def walk(node, depth=0):
+    if node.sym is not None:
+        raw_len[node.sym] = max(depth, 1)   # at least 1 bit (handles 1-symbol edge case)
+        return
+    walk(node.l, depth + 1)
+    walk(node.r, depth + 1)
+
+walk(root)
+
+MAX_L = 16
+for s in range(256):
+    raw_len[s] = min(raw_len[s], MAX_L)
+
+# Sanity check: Kraft inequality must hold
+kraft = sum(2 ** -raw_len[s] for s in range(256))
+assert kraft <= 1.0 + 1e-9, f"Kraft sum {kraft:.6f} > 1 — distribution too skewed, reduce MAX_L or adjust frequencies"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 4.  Canonical code assignment
+#     Symbols sorted by (length, byte_value) — the canonical ordering
+# ─────────────────────────────────────────────────────────────────────────────
+order = sorted(range(256), key=lambda s: (raw_len[s], s))
+
+can_code = {}   # sym  → right-justified integer code value
+can_len  = {}   # sym  → code length in bits
+
+cur_code = 0
+cur_len  = raw_len[order[0]]
+
+for i, sym in enumerate(order):
+    L = raw_len[sym]
+    if i > 0:
+        cur_code += 1
+        if L > cur_len:
+            cur_code <<= (L - cur_len)
+            cur_len = L
+    can_code[sym] = cur_code
+    can_len[sym]  = L
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 5.  Build decoder tables
+#     first_code[L] : left-justified 16-bit first canonical code of length L
+#     base[L]       : starting index in symbol_table for length-L group
+#     symbol_table  : symbols in canonical order (length-ascending, sym-ascending)
+# ─────────────────────────────────────────────────────────────────────────────
+first_code   = [0xFFFF] * 17   # indices 1..16; 0xFFFF = sentinel "no code here"
+base_tbl     = [0]      * 17
+symbol_table = []
+
+idx = 0
+for L in range(1, MAX_L + 1):
+    group = [s for s in order if can_len[s] == L]
+    if group:
+        # Left-justify the first code of this length to 16 bits
+        first_code[L] = (can_code[group[0]] << (16 - L)) & 0xFFFF
+        base_tbl[L]   = idx
+        symbol_table.extend(group)
+        idx += len(group)
+    else:
+        first_code[L] = 0xFFFF   # sentinel: no symbol has this length
+        base_tbl[L]   = idx      # value doesn't matter when sentinel active
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 6.  Statistics
+# ─────────────────────────────────────────────────────────────────────────────
+total_freq = sum(FREQS)
+avg_len    = sum(can_len[s] * FREQS[s] for s in range(256)) / total_freq
+comp_ratio = 8.0 / avg_len
+lengths_used = sorted(set(can_len.values()))
+
+print("=" * 60)
+print("Canonical Huffman — 256-byte gradient distribution")
+print("=" * 60)
+print(f"  Average code length : {avg_len:.3f} bits  (raw = 8 bits)")
+print(f"  Compression ratio   : {comp_ratio:.2f}x")
+print(f"  Code lengths used   : {lengths_used}")
+print(f"  Symbol table size   : {len(symbol_table)} entries")
+print()
+print("  Most common codes:")
+top = sorted(range(256), key=lambda s: -FREQS[s])[:8]
+for s in top:
+    print(f"    0x{s:02X} : len={can_len[s]:2d}  code={can_code[s]:0{can_len[s]}b}  freq={FREQS[s]}")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 7.  Write SystemVerilog include file
+# ─────────────────────────────────────────────────────────────────────────────
+SVH_PATH = (
+    pathlib.Path(__file__).parent
+    / "Hardware Design"
+    / "Huffman_System_Test"
+    / "Huffman_System_Test.srcs"
+    / "sources_1"
+    / "new"
+    / "huffman_tables.svh"
+)
+
+lines = []
+a = lines.append
+
+a("// ================================================================")
+a("// huffman_tables.svh")
+a("// Auto-generated by compute_huffman.py — DO NOT EDIT MANUALLY")
+a("//")
+a(f"// Distribution : gradient-like (256-byte alphabet)")
+a(f"// Avg code len : {avg_len:.3f} bits  (raw = 8 bits)")
+a(f"// Compression  : {comp_ratio:.2f}x")
+a("// ================================================================")
+a("")
+
+# ── config_encoder_full ───────────────────────────────────────────────────────
+a("task config_encoder_full();")
+a("begin")
+a("    enc_wr_en = 1;")
+for sym in range(256):
+    L    = can_len[sym]
+    C    = can_code[sym]
+    data = ((L & 0xF) << 16) | (C & 0xFFFF)
+    a(f"    @(posedge clk); enc_addr_config = 8'h{sym:02X}; enc_data_config = 20'h{data:05X}; // 0x{sym:02X}: len={L}, code={C:0{L}b}")
+a("    @(posedge clk); enc_wr_en = 0;")
+a("end")
+a("endtask")
+a("")
+
+# ── config_decoder_full ───────────────────────────────────────────────────────
+a("task config_decoder_full();")
+a("begin")
+a("    dec_wr_en = 1;")
+a("")
+a("    // first_code table (table_sel = 0)")
+a("    dec_table_sel = 2'd0;")
+for L in range(1, 17):
+    a(f"    @(posedge clk); dec_addr_config = 8'd{L}; dec_data_config = 16'h{first_code[L]:04X}; // first_code[{L}]")
+a("")
+a("    // base table (table_sel = 1)")
+a("    dec_table_sel = 2'd1;")
+for L in range(1, 17):
+    a(f"    @(posedge clk); dec_addr_config = 8'd{L}; dec_data_config = 16'd{base_tbl[L]}; // base[{L}]")
+a("    @(posedge clk); // extra cycle before table_sel change")
+a("")
+a("    // symbol_table (table_sel = 2)")
+a("    dec_table_sel = 2'd2;")
+for i, sym in enumerate(symbol_table):
+    a(f"    @(posedge clk); dec_addr_config = 8'd{i}; dec_data_config = 16'h{sym:04X}; // [{i}] = 0x{sym:02X}")
+a("")
+a("    @(posedge clk); dec_wr_en = 0;")
+a("end")
+a("endtask")
+a("")
+
+SVH_PATH.write_text("\n".join(lines) + "\n")
+print(f"\nWritten: {SVH_PATH}")
