@@ -1,0 +1,2275 @@
+<?xml version="1.0" ?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink" xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:oel="http://schemas.microsoft.com/office/2019/extlst" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml" xmlns:w16du="http://schemas.microsoft.com/office/word/2023/wordml/word16du" xmlns:w16sdtdh="http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash" xmlns:w16sdtfl="http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 w16se w16cid w16 w16cex w16sdtdh w16sdtfl w16du wp14">
+  <w:body>
+    <w:p w14:paraId="54FE6DFB" w14:textId="5F74DBDF" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00ED684C">
+      <w:pPr>
+        <w:spacing w:after="180"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:sz w:val="32"/>
+          <w:szCs w:val="32"/>
+        </w:rPr>
+        <w:t>FPGA Acceleration for Huffman Coding</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3FCE0981" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>Anirudhhan Raghuraman</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="5E4F731A" w14:textId="4C5B23AF" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t xml:space="preserve">Department of Electronics and </w:t>
+      </w:r>
+      <w:r w:rsidR="000F4C54" w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>Computer</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t xml:space="preserve"> Engineering</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="28FF9319" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="320"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>April 2026</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6FBAFA13" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00B539AB">
+      <w:pPr>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="4" w:space="1" w:color="000000"/>
+        </w:pBdr>
+        <w:spacing w:after="160"/>
+      </w:pPr>
+    </w:p>
+    <w:p w14:paraId="73189C7E" w14:textId="00F43B7E" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120"/>
+        <w:ind w:left="720" w:right="720"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>Abstract—</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t xml:space="preserve">This </w:t>
+      </w:r>
+      <w:r w:rsidR="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>report</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t xml:space="preserve"> presents the design, implementation, and verification of a hardware-accelerated Huffman coding system targeting Field-Programmable Gate Array (FPGA) platforms. The system comprises a Huffman Encoder and a Huffman Decoder implemented in SystemVerilog, connected via an AXI-stream-like valid/ready handshake interface. The encoder accepts 8-bit input symbols and produces a compressed 32-bit output stream using a configurable lookup table; the decoder reconstructs the original symbol sequence using canonical Huffman tables. Both modules feature fully dynamic, runtime-configurable Huffman tables, enabling support for arbitrary input distributions without design recompilation. The complete system was verified through behavioural simulation in Vivado 2024, demonstrating correct round-trip encoding and decoding. Key design decisions include MSB-first bit packing, a 64-bit internal accumulator/sliding window, and the always_comb/always_ff split pattern for simulation correctness.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="123875B4" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="280"/>
+        <w:ind w:left="720" w:right="720"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>Index Terms—</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>Huffman coding, canonical Huffman decoding, FPGA, SystemVerilog, data compression, hardware accelerator, Vivado, bit packing.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="1B082B79" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00B539AB">
+      <w:pPr>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="4" w:space="1" w:color="000000"/>
+        </w:pBdr>
+        <w:spacing w:after="160"/>
+      </w:pPr>
+    </w:p>
+    <w:p w14:paraId="23787376" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>I. INTRODUCTION</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="5EF239AD" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>A. Motivation</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0D9B8A73" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Data compression is a fundamental operation in modern computing, underpinning applications ranging from file archiving and multimedia streaming to network communications and storage systems. As data volumes continue to grow exponentially, the demand for fast, energy-efficient compression hardware has intensified. Software-based compression, while flexible, is increasingly a bottleneck in high-throughput systems where data must be processed at line rate. FPGAs offer a compelling alternative: their reconfigurable logic fabric enables massively parallel, pipelined processing at clock rates that can match or exceed the requirements of high-speed data links, while consuming significantly less power than general-purpose processors performing equivalent work.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="231B2722" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Huffman coding, one of the oldest and most widely used lossless compression algorithms, is particularly well-suited to hardware acceleration. Its core operations—table lookup, bit packing, and canonical code matching—map naturally onto the parallel, dataflow-oriented architecture of an FPGA. This project investigates the feasibility and correctness of implementing a complete Huffman compression pipeline in SystemVerilog, targeting Xilinx FPGA devices and the Vivado design suite.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="63B91685" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>B. Objectives</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4EA1DDFB" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The primary objectives of this project are:</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="32CDD514" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• Design and implement a configurable Huffman encoder in SystemVerilog that accepts 8-bit symbols and outputs a packed bitstream.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="1D743383" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• Design and implement a canonical Huffman decoder that reconstructs the original symbol stream from the compressed input.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0DE8FADD" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• Establish a valid/ready handshake protocol between all modules to support back-pressure and variable-rate data flows.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3DECB4B2" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:lastRenderedPageBreak/>
+        <w:t>• Verify the complete system through behavioural simulation, demonstrating correct round-trip encoding and decoding.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3CDCE449" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• Identify limitations of the current implementation and propose directions for future work.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="012E9346" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>II. BACKGROUND</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="72D4943B" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>A. Huffman Coding</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6047974A" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Huffman coding, introduced by David A. Huffman in 1952 [1], is an entropy-based lossless data compression algorithm that assigns variable-length binary codes to input symbols such that more frequently occurring symbols receive shorter codes, minimising the expected total bit count. The algorithm constructs an optimal prefix-free binary tree from the symbol frequency distribution. Because no code is a prefix of another, the encoding is uniquely decodable without delimiters. Huffman coding achieves the theoretical entropy lower bound when symbol frequencies are exact powers of two, and approaches it asymptotically for arbitrary distributions.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3583E101" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>B. Canonical Huffman Coding</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="1F5BA527" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Canonical Huffman coding [2] standardises code assignment by two rules: codes of the same length are assigned in lexicographic order of the corresponding symbols, and the first code of each length is derived from the previous length's last code by a left-shift and increment. The resulting codebook can be transmitted compactly by sending only the code lengths, and decoded efficiently using three small tables—the first code of each length, a base index offset, and a symbol table—without storing the full Huffman tree. This makes canonical Huffman coding the standard in hardware accelerators and compressed file formats such as DEFLATE [10].</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="19DB8F14" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>C. FPGA Advantages for Data Compression</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="170CB7CD" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>FPGAs are well-suited to compression pipelines for several reasons. Their reconfigurable look-up table fabric enables the direct implementation of arbitrary combinational logic, such as code lookup tables and length-detection comparators. Block RAM resources provide large symbol tables with single-cycle read latency. Pipelining and parallelism can be exploited to sustain high throughput, and unlike fixed-function ASICs, FPGAs can be reconfigured at runtime to support different Huffman tables. FPGAs also interface directly with high-speed memory and communication peripherals, making them suitable for storage, network, and signal processing applications [8].</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="5DF3FC87" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>III. SYSTEM DESIGN</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="742BA4B3" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>A. Architecture Overview</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="495A692D" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The system consists of two principal modules: the Huffman Encoder (huffman_encoder) and the Huffman Decoder (Decoder), connected in series to form a complete compression and decompression pipeline. A SystemVerilog testbench (system_tb) instantiates both modules, provides clock and reset signals, loads the Huffman tables into each module via a shared configuration bus, and drives a sequence of input symbols to the encoder. The encoder's compressed output stream is connected directly to the decoder's input, enabling end-to-end verification. All inter-module data transfers use a valid/ready handshake protocol inspired by the AXI4-Stream specification [6].</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2C81D0D2" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>B. Encoder Design</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0B34CA3B" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The encoder accepts 8-bit symbols and produces a 32-bit compressed output stream. Internally it maintains a 64-bit accumulator register as a bit-packing buffer. Symbols are encoded MSB-first: the most significant bit of each Huffman code is placed at the highest available position in the accumulator, ensuring compatibility with the canonical decoder which scans bits from the MSB end. The Huffman code for each symbol is retrieved from a 256-entry lookup table, where each entry stores a 4-bit code length and a 16-bit code. This table is written at runtime via a dedicated configuration interface (wr_en, addr_config, data_config), allowing the codebook to be updated without FPGA reconfiguration.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="033EE6EB" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:lastRenderedPageBreak/>
+        <w:t>The encoder's datapath uses the always_comb/always_ff two-process pattern [3]. The combinational block computes the next state of the accumulator and bit count, handling two concurrent events: a flush (when stream_valid and stream_ready are both asserted, the upper 32 bits are emitted and the accumulator shifts left by 32) and an accumulation (when symbol_valid and symbol_ready are both asserted, the new code is OR'd into the accumulator at the current bit position using the formula: accumulator |= code &lt;&lt; (64 − N − L), where N is the current bit count and L is the code length).</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="1F2D82AA" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>C. Decoder Design</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2FFA7D91" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The decoder receives 32-bit compressed stream words and reconstructs the original 8-bit symbol sequence. It maintains a 64-bit sliding bit window into which incoming stream words are loaded MSB-aligned. Decoding proceeds by examining the top 16 bits of the window (peek = bit_window[63:48]). The code length L is determined by a combinational comparator loop: for each L from 1 to 16, if peek ≥ first_code[L], L is set. The final value is the decoded code length.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="37AFEAEF" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Once the length is known, the decoded symbol index is computed as: index = base[L] + ((peek − first_code[L]) &gt;&gt; (16 − L)). This subtracts the left-justified first code of the detected length from peek, right-shifts by (16 − L) to produce the ordinal offset within the code group, then adds the base offset to index into the symbol table. After a symbol is output, the bit window shifts left by L and the bit count decrements accordingly.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="72D4A2B2" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>D. Interface Design</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="627278A1" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>All data interfaces follow a valid/ready handshake. A transfer occurs when both valid and ready are asserted on the same rising clock edge, supporting back-pressure from downstream modules. The encoder asserts symbol_ready when its bit count is below 32 or when a stream output handshake is in progress. The decoder asserts stream_ready when bit_count ≤ 32, and asserts symbol_valid when bit_count ≥ 1.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="AA000001" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>E. Operational Workflow</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="AA000002" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Fig. 6 illustrates the end-to-end encoder workflow. The encoder is first configured by writing a (length, code) pair into each of the 256 code_table entries via the configuration bus. Once configuration is complete, the symbol input pipeline opens: on each clock cycle where symbol_valid and symbol_ready are both asserted, the encoder reads the 8-bit symbol, looks up its Huffman code, and shifts the code MSB-first into a 64-bit accumulator. When the accumulator holds at least 32 bits, the upper 32 bits are emitted as stream_out and the accumulator is left-shifted by 32. At end of stream, additional zero-valued symbols are sent to flush any residual bits from the accumulator.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="AA000003" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr><w:spacing w:after="60" w:line="276" w:lineRule="auto"/><w:jc w:val="center"/></w:pPr>
+      <w:r><w:drawing>
+        <wp:inline distT="0" distB="0" distL="0" distR="0">
+          <wp:extent cx="3824568" cy="5486400"/>
+          <wp:effectExtent l="0" t="0" r="0" b="0"/>
+          <wp:docPr id="20" name="EncoderFlowchart"/>
+          <wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr>
+          <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+            <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+              <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:nvPicPr>
+                  <pic:cNvPr id="20" name="EncoderFlowchart"/>
+                  <pic:cNvPicPr/>
+                </pic:nvPicPr>
+                <pic:blipFill>
+                  <a:blip r:embed="rId16" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"/>
+                  <a:stretch><a:fillRect/></a:stretch>
+                </pic:blipFill>
+                <pic:spPr>
+                  <a:xfrm><a:off x="0" y="0"/><a:ext cx="3824568" cy="5486400"/></a:xfrm>
+                  <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+                </pic:spPr>
+              </pic:pic>
+            </a:graphicData>
+          </a:graphic>
+        </wp:inline>
+      </w:drawing></w:r>
+    </w:p>
+    <w:p w14:paraId="AA000003B" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr><w:spacing w:after="60"/><w:jc w:val="center"/></w:pPr>
+      <w:r><w:rPr><w:i/><w:iCs/></w:rPr><w:t>Fig. 6. Encoder operational flowchart.</w:t></w:r>
+    </w:p>
+    <w:p w14:paraId="AA000003B" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr><w:spacing w:after="60"/><w:jc w:val="center"/></w:pPr>
+      <w:r><w:rPr><w:i/><w:iCs/></w:rPr><w:t>Fig. 6. Encoder operational flowchart.</w:t></w:r>
+    </w:p>
+    <w:p w14:paraId="AA000004" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Fig. 7 illustrates the decoder workflow. The decoder is configured in three sequential phases: the first_code table (left-justified first canonical code per length), the base table (symbol-table offset per length), and the symbol_table (256 decoded symbols in canonical order). During decoding, each incoming 32-bit stream word is loaded into the top of a 64-bit sliding window. The decoder peeks at the top 16 bits and scans lengths from 1 to 16, selecting the smallest L for which peek ≥ first_code[L]. The decoded symbol is read from symbol_table at index base[L] + ((peek − first_code[L]) >> (16 − L)), and the window advances by L bits.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="AA000005" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr><w:spacing w:after="60" w:line="276" w:lineRule="auto"/><w:jc w:val="center"/></w:pPr>
+      <w:r><w:drawing>
+        <wp:inline distT="0" distB="0" distL="0" distR="0">
+          <wp:extent cx="1718424" cy="5486400"/>
+          <wp:effectExtent l="0" t="0" r="0" b="0"/>
+          <wp:docPr id="21" name="DecoderFlowchart"/>
+          <wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr>
+          <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+            <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+              <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:nvPicPr>
+                  <pic:cNvPr id="21" name="DecoderFlowchart"/>
+                  <pic:cNvPicPr/>
+                </pic:nvPicPr>
+                <pic:blipFill>
+                  <a:blip r:embed="rId17" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"/>
+                  <a:stretch><a:fillRect/></a:stretch>
+                </pic:blipFill>
+                <pic:spPr>
+                  <a:xfrm><a:off x="0" y="0"/><a:ext cx="1718424" cy="5486400"/></a:xfrm>
+                  <a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+                </pic:spPr>
+              </pic:pic>
+            </a:graphicData>
+          </a:graphic>
+        </wp:inline>
+      </w:drawing></w:r>
+    </w:p>
+    <w:p w14:paraId="AA000005B" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr><w:spacing w:after="60"/><w:jc w:val="center"/></w:pPr>
+      <w:r><w:rPr><w:i/><w:iCs/></w:rPr><w:t>Fig. 7. Decoder operational flowchart.</w:t></w:r>
+    </w:p>
+    <w:p w14:paraId="AA000005B" w14:textId="77777777" w:rsidR="00AA0001" w:rsidRDefault="00AA0001">
+      <w:pPr><w:spacing w:after="60"/><w:jc w:val="center"/></w:pPr>
+      <w:r><w:rPr><w:i/><w:iCs/></w:rPr><w:t>Fig. 7. Decoder operational flowchart.</w:t></w:r>
+    </w:p>
+    <w:p w14:paraId="5C8A9CF7" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>IV. IMPLEMENTATION</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4CB49FD3" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>A. SystemVerilog Implementation</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4864314D" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Both modules are implemented in SystemVerilog targeting Vivado 2024. The always_comb/always_ff two-process coding style was adopted throughout. This pattern separates all combinational next-state logic into always_comb blocks driving module-level next-state signals (next_acc, next_count, next_window), while always_ff blocks are reduced to simple registered assignments or synchronous resets. This separation avoids a Vivado xsim artefact in which blocking assignments to module-level signals inside always_ff blocks cause incorrect initialisation, manifesting as persistent unknown (X) values. This issue was diagnosed and resolved after observing that bit_count remained X throughout simulation despite a syntactically correct reset in a single-process always_ff block.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="46C43409" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The decoder mirrors the encoder's MSB convention by loading incoming 32-bit words at the top of the 64-bit bit window: next_window |= (stream_in &lt;&lt; (32 − bit_count)). This ensures that peek (bit_window[63:48]) always presents the most recently received, not-yet-decoded bits at the most significant positions, as required by the canonical length-detection logic.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="700D07AC" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>B. Testbench and Configuration</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3EEC397C" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The system testbench drives the complete pipeline in two phases. During configuration (0–300 ns), the testbench loads the encoder's code lookup table and the decoder's three canonical tables. For the test case, symbol frequencies yield: B = 0 (1 bit), A = 10 (2 bits), C = 11 (2 bits). The decoder's first_code table stores left-justified 16-bit codes: first_code[1] = 0x0000, first_code[2] = 0x8000. Lengths 3–16 are loaded with the sentinel value 0xFFFF. A critical implementation detail: dec_table_sel must not transition before the final clock edge of each table write phase, or writes will be misdirected to the wrong table.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="07662863" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:lastRenderedPageBreak/>
+        <w:t>In the stimulus phase, the testbench sends seven repetitions of (A, B, C)—a total of 21 symbols encoding to 35 bits (5 bits per triple: A=2, B=1, C=2). This triggers one 32-bit stream flush in the encoder. The testbench waits a further 500 ns after the last symbol to allow full decoding of the received stream word.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="75280560" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>V. RESULTS AND VERIFICATION</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="1B63228C" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>A. Encoder Simulation Results</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="45311346" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The encoder was simulated in isolation to verify correct symbol intake, code lookup, MSB-first bit packing, and stream output. During the configuration phase (0–100 ns), wr_en pulses high while addr_config and data_config load codes for symbols A (0x41: code=10, len=2), B (0x42: code=0, len=1), and C (0x43: code=11, len=2). Following configuration, symbols are presented on symbol_in and stream_out is observed to build from 0x00000000, with each new code OR'd MSB-first into the accumulator. stream_valid asserts for one clock cycle once 32 bits are packed. The waveform is shown in Fig. 1.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="06BD4A09" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="60"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:drawing>
+          <wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="339D90CB" wp14:editId="3EC87956">
+            <wp:extent cx="5524500" cy="2095500"/>
+            <wp:effectExtent l="0" t="0" r="0" b="0"/>
+            <wp:docPr id="1" name="Picture 1"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name=""/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId7"/>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="5524500" cy="2095500"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+          </wp:inline>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="26CDFA70" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="60" w:after="220"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>Fig. 1.  Encoder simulation waveform—configuration phase followed by symbol input (A=0x41, B=0x42, C=0x43), MSB-first accumulation in stream_out, and stream_valid pulse.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="470D52E2" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>B. Decoder Simulation Results</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="65318AC8" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The decoder was simulated in isolation with the canonical tables loaded via the three-phase configuration interface (table_sel cycles through 0 = first_code, 1 = base, 2 = symbol_table). As shown in Fig. 2, once stream_in receives a valid 32-bit word and stream_valid asserts, symbol_valid rises high and symbol_out begins outputting decoded symbols at clock rate. The symbols 0x41 (A) and 0x42 (B) are visible at the right of the waveform, confirming correct length detection and table lookup.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="38A5FCF7" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="60"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:drawing>
+          <wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="2BE3BDEC" wp14:editId="5AF9CCDE">
+            <wp:extent cx="5524500" cy="2095500"/>
+            <wp:effectExtent l="0" t="0" r="0" b="0"/>
+            <wp:docPr id="2064507359" name="Picture 2064507359"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name=""/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId8"/>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="5524500" cy="2095500"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+          </wp:inline>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="52E64F32" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="60" w:after="220"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:lastRenderedPageBreak/>
+        <w:t>Fig. 2.  Decoder simulation waveform—three-phase table configuration followed by stream input and decoded symbol output (0x41 = A, 0x42 = B).</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6879053B" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>C. Combined System Verification</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="05CAA0FF" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The full encoder-decoder pipeline was verified by running system_tb with 21 symbols (7 repetitions of A, B, C). Fig. 3 shows the complete simulation timeline. The configuration phase occupies 0–300 ns; the encoding phase follows with stream_out accumulating in the middle rows while the decoder's symbol_out begins cycling through decoded values after the first stream handshake at approximately 700 ns.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="498F1414" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="60"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:drawing>
+          <wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="3C353B16" wp14:editId="61289E0C">
+            <wp:extent cx="5524500" cy="2324100"/>
+            <wp:effectExtent l="0" t="0" r="0" b="0"/>
+            <wp:docPr id="476980196" name="Picture 476980196"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name=""/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId9"/>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="5524500" cy="2324100"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+          </wp:inline>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="11021B03" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="60" w:after="220"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>Fig. 3.  Full system simulation (0–1000 ns)—configuration phase, MSB-first encoder accumulation, stream handshake at ≈700 ns, and decoder symbol output.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="18D2EA1B" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Fig. 4 zooms into the 300–650 ns encoding window. stream_out increments step-by-step as each symbol is packed MSB-first: 0x80000000 → 0x98000000 → 0x9C000000 → … → 0x9CE739CE. This progression precisely matches the expected bit pattern for six repetitions of A(10), B(0), C(11) plus the leading bits of the seventh triple, confirming the correctness of the encoder.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6E6BC122" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="60"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:drawing>
+          <wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="6E441124" wp14:editId="445289AA">
+            <wp:extent cx="5524500" cy="2076450"/>
+            <wp:effectExtent l="0" t="0" r="0" b="0"/>
+            <wp:docPr id="711570306" name="Picture 711570306"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name=""/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId10"/>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="5524500" cy="2076450"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+          </wp:inline>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="36DD1F73" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="60" w:after="220"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>Fig. 4.  Encoder accumulation phase (300–650 ns)—stream_out builds MSB-first to the final encoded word 0x9CE739CE.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="5C0C6068" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Fig. 5 shows the 680–880 ns window where the stream handshake and decoding occur. stream_valid pulses at approximately 700 ns, and the decoder immediately begins outputting symbols at clock rate. symbol_out cycles correctly through 0x42 (B), 0x41 (A), 0x42 (B), 0x43 (C), confirming correct round-trip operation of the complete pipeline.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="61DB699E" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="60"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:lastRenderedPageBreak/>
+        <w:drawing>
+          <wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="2D7814B4" wp14:editId="72BEFDFA">
+            <wp:extent cx="5524500" cy="2447925"/>
+            <wp:effectExtent l="0" t="0" r="0" b="0"/>
+            <wp:docPr id="403072797" name="Picture 403072797"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name=""/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId11"/>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="5524500" cy="2447925"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+          </wp:inline>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="396FCB8F" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="60" w:after="220"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>Fig. 5.  Decoder output phase (680–880 ns)—stream_valid pulse triggers decoding; symbol_out correctly cycles through A (0x41), B (0x42), C (0x43).</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="10E0FBC7" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>D. Correctness Summary</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2227B811" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The following outcomes were verified through simulation:</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="68CD358C" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• The encoder correctly packs Huffman codes MSB-first into a 32-bit output stream.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="238C1FBE" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• The decoder correctly reconstructs the original symbol sequence from the compressed stream.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="51AA745E" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• The valid/ready handshake operates correctly under normal conditions.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="133F2AC5" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• The configurable table interface correctly loads the Huffman codebook at runtime.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="79587B44" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="360" w:hanging="360"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>• The always_comb/always_ff pattern eliminates X-propagation issues observed with earlier implementations.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="527DC647" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>VI. GRADIENT COMPRESSION PERFORMANCE ANALYSIS</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3E2C8542" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="4D010B4B" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>A. Motivation and Scenario Definition</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3C1B1FAD" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The 256-symbol Huffman hardware is designed to compress bfloat16 gradient tensors before gRPC transmission in a distributed LLM training system. Three frequency distributions were defined that model different stages of training, and a canonical Huffman codebook was computed for each.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="779B0B1B" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The highly sparse scenario (FREQS[0x00] = 10000) models early-training gradients where zero bytes dominate. The moderate scenario (FREQS[0x00] = 1000) models mid-training gradients where zeros remain common but non-zero values are significant. The dense scenario (FREQS[0x00] = 100) models late-training gradients where the byte distribution is nearly uniform.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="12061428" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="0E3FF410" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>B. Compression Results</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4682BFC3" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Table I summarises the canonical Huffman results for each scenario. The average code length is the weighted mean over all 256 symbols; the compression ratio is defined as 8 / average_code_length.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="21036D4A" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="1B84745F" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>TABLE I — HUFFMAN COMPRESSION ACROSS GRADIENT SCENARIOS</w:t>
+      </w:r>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="TableGrid"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="2337"/>
+        <w:gridCol w:w="2337"/>
+        <w:gridCol w:w="2338"/>
+        <w:gridCol w:w="2338"/>
+      </w:tblGrid>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="21F73114" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="6EF7B3DA" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Scenario  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="2FBBB240" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  FREQS[0x00]  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="4EB2050F" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  Avg Code Length (bits)  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="1E78F90D" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  Compression Ratio</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="4B67FEE7" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="23229F70" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Highly Sparse  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="024B56FF" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  10,000  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="1F5516CE" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  3.314  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="1E58B016" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  2.41x</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="6C9107B7" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="6FAAC59F" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Moderate  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="056C5F93" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  1,000  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="299B32CA" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  5.908  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="41F8458D" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  1.35x</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="403A76FC" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="12E1DAFD" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Dense  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2337" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="7D9AD7C6" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  100  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="3854CC27" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  7.862  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2338" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="2828CC83" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="003D2A03">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  1.02x</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w14:paraId="2718D517" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="7EB39F1B" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The highly sparse distribution achieves 2.41x compression, driven by the dominant zero byte being assigned a single-bit code. The moderate distribution achieves 1.35x. The dense distribution achieves only 1.02x, confirming that Huffman coding provides negligible benefit when all symbols are approximately equally likely.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4BEBC126" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="2E5DAFD7" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>C. Impact on Gradient Communication</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="5B2F8732" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:lastRenderedPageBreak/>
+        <w:t>For a GPT-2 model (124 million parameters, bfloat16 precision), each gradient synchronisation round transmits approximately 248 MB of raw data. Table II shows the compressed payload and estimated transfer time for each scenario on a 1 Gbps gRPC link (baseline transfer time: 1984 ms).</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="49627CEE" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="625F8249" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>TABLE II — GRADIENT TRANSFER IMPACT (GPT-2, 248 MB, 1 Gbps LINK)</w:t>
+      </w:r>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="TableGrid"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="1870"/>
+        <w:gridCol w:w="1870"/>
+        <w:gridCol w:w="1870"/>
+        <w:gridCol w:w="1870"/>
+        <w:gridCol w:w="1870"/>
+      </w:tblGrid>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="65DBCEBD" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="1B2C18CB" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Scenario  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="05BFD5E1" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  Compressed Size  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="2B7CB9B5" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  Transfer Time  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="6AED2B98" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  Time Saved  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="27AE5411" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  Reduction</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="0F03017F" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="3C971C33" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Highly Sparse (2.41x)  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="0C21ADD1" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  103 MB  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="0315E3E0" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  823 ms  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="79D3BDA5" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  1161 ms  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="4B1F68C4" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  58.5%</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="1B89265B" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="015D13E5" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Moderate (1.35x)  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="6AD0F8DA" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  184 MB  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="6DE7BA08" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  1470 ms  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="6DD8AD6E" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  514 ms  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="2C823DCA" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  25.9%</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="0B2F7BB5" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="77913ED5" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">Dense (1.02x)  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="1A24600D" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  243 MB  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="00859124" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  1945 ms  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="1F1DD152" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  39 ms  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="55F3F5F4" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  2.0%</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00186B6C" w:rsidRPr="00186B6C" w14:paraId="7515AB06" w14:textId="77777777">
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="37A97352" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">No compression  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="7AB9DCD7" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  248 MB  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="475A0BF5" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  1984 ms  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="6489868D" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:pPr>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  —  </w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1870" w:type="dxa"/>
+          </w:tcPr>
+          <w:p w14:paraId="0AFBB32E" w14:textId="77777777" w:rsidR="00186B6C" w:rsidRPr="00186B6C" w:rsidRDefault="00186B6C" w:rsidP="006733BA">
+            <w:r w:rsidRPr="00186B6C">
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t xml:space="preserve">  —</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w14:paraId="583F52F5" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="105E55FA" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Under sparse gradient conditions — the dominant case during early training — FPGA Huffman compression reduces the 248 MB payload to approximately 103 MB, cutting transfer time by 58.5% per synchronisation round. This directly accelerates the global step rate in the parameter-server training loop. For moderate gradients the saving is 25.9%, still meaningful when communication is the bottleneck. For dense gradients the saving is negligible (2.0%), and bypassing compression would be preferable to avoid encoding latency.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0E150A8D" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="58427593" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>D. Hardware Verification Across Scenarios</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="08A564A5" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Each scenario was verified end-to-end in Vivado behavioural simulation. The Python scripts (compute_huffman_highly_sparse.py, compute_huffman_moderate.py, compute_huffman_dense.py) regenerate huffman_tables.svh for each distribution; the testbench includes this file and calls config_encoder_full() and config_decoder_full() at runtime — no RTL modifications are required between scenarios.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="4C12B20E" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>In all three cases, symbol_out correctly reproduced the input sequence after the full encoder-decoder pipeline. The waveforms show the expected increase in stream_valid pulse frequency as average code length grows: in the dense case, fewer symbols fit per 32-bit stream word, producing more frequent handshakes for the same input volume.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0445B20F" w14:textId="77777777" w:rsidR="00845DF7" w:rsidRPr="00186B6C" w:rsidRDefault="00845DF7"/>
+    <w:p w14:paraId="00CC9D4E" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>VII. DISCUSSION</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="44BB611F" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>A. Design Challenges</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6389CD69" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Three non-trivial design challenges were encountered and resolved. The first was X-propagation in the encoder: initial implementation placed blocking assignments to module-level signals inside always_ff, causing Vivado xsim to propagate unknown values into the registered bit_count even after a syntactically correct synchronous reset. The root cause was xsim's treatment of module-level blocking-assignment targets as having simulation-time state that is not fully overwritten before non-blocking assignments evaluate. The resolution—the always_comb/always_ff split—is a best-practice SystemVerilog coding style [3] supported across all synthesis and simulation tools.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="389A10B5" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The second challenge was a bit direction mismatch: the encoder initially packed bits LSB-first while the canonical decoder required MSB-first. This caused the decoder's peek logic to read zeros regardless of stream content. The fix was to redesign the encoder to output acc[63:32], flush via left-shift, and pack with acc |= code &lt;&lt; (64 − N − L). The decoder's load logic was simultaneously updated to place incoming words MSB-aligned in the bit window.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="097FC83F" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The third challenge was a testbench configuration timing bug. dec_table_sel was changed from 1 (base) to 2 (symbol_table) before the clock edge intended to write base[2] = 1, redirecting that write to symbol_table[2]. This left base[2] uninitialised (X), causing unknown index computation for all length-2 codes (A and C) while length-1 codes (B) decoded correctly. The fix was to insert one additional clock cycle before the table_sel transition.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="0631E039" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="180" w:after="80"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+        </w:rPr>
+        <w:t>B. Limitations and Future Work</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="42739B30" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t xml:space="preserve">The current implementation has several limitations. First, the encoder lacks a flush mechanism for the final partial 32-bit word; a production system requires an end-of-stream signal and associated flush logic. Second, the testbench tests only a single fixed codebook; a rigorous campaign would include randomised streams, edge cases (single-symbol alphabets, maximum-length codes), and formal property checking [4]. Third, the system has not been through the full </w:t>
+      </w:r>
+      <w:r w:rsidRPr="00186B6C">
+        <w:lastRenderedPageBreak/>
+        <w:t>Vivado implementation flow, so the achievable clock frequency and resource utilisation on a target device remain unknown. Finally, the design does not include a mechanism for transmitting the Huffman tree alongside the compressed data, which would be required for a self-contained compression system.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="681547EB" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>VIII. CONCLUSION</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="1374E727" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>This paper has presented the design and verification of an FPGA-targeted Huffman compression pipeline in SystemVerilog. The system comprises a configurable encoder and a canonical decoder connected via a valid/ready handshake interface. The encoder packs variable-length codes MSB-first into a 64-bit accumulator and outputs 32-bit stream words; the decoder uses three configurable canonical tables and a 64-bit sliding window to reconstruct the original symbol sequence.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="06D48269" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>Behavioural simulation in Vivado 2024 confirmed correct round-trip operation: the encoder produced the expected word 0x9CE739CE for a repeated A, B, C input sequence, and the decoder successfully reconstructed the original symbols. Three significant design challenges were identified and resolved—an X-propagation defect, a bit direction mismatch, and a testbench configuration timing error—each providing valuable insight into hardware design methodology and simulation-based verification practice.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="219BB550" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:t>The project demonstrates that canonical Huffman coding is amenable to efficient hardware implementation with fully dynamic, runtime-configurable codebooks. The foundation established here supports straightforward extension to a full compression system including end-of-stream flushing, codebook transmission, and integration with memory or communication interfaces. With synthesis and implementation, the design is expected to achieve high throughput at modest resource cost on modern FPGA families.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="BB000001" w14:textId="77777777" w:rsidR="00BB0001" w:rsidRDefault="00BB0001">
+      <w:pPr>
+        <w:spacing w:after="120" w:line="276" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">The complete source code for this project — including the SystemVerilog encoder and decoder, the system testbench, and the Python Huffman table generation scripts — is publicly available at: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>https://github.com/[your-username]/FPGA-Acceleration-for-Huffman-Coding</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="6D877642" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:before="280" w:after="140"/>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:b/>
+          <w:bCs/>
+        </w:rPr>
+        <w:t>REFERENCES</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="00D0A4A9" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[1] D. A. Huffman, “A method for the construction of minimum-redundancy codes,” Proc. IRE, vol. 40, no. 9, pp. 1098–1101, 1952.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="5F49A369" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[2] Canonical Huffman code, Wikipedia. [Online]. Available: https://en.wikipedia.org/wiki/Canonical_Huffman_code</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="270EDFF2" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[3] IEEE Std 1800-2017, IEEE Standard for SystemVerilog: Unified Hardware Design, Specification, and Verification Language. IEEE, 2017.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="00B1FBF8" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[4] X. Devroey et al., “Formal property checking for digital hardware,” IEEE Trans. Comput.-Aided Design, 2020.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="471BFD49" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[5] D. Salomon and G. Motta, Handbook of Data Compression, 5th ed. Springer, 2010.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="17D0A919" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[6] ARM Ltd., AMBA AXI4-Stream Protocol Specification, IHI0051B. ARM Holdings, 2023.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="3AF3DF47" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[7] B. Parhami, Computer Arithmetic: Algorithms and Hardware Designs, 2nd ed. Oxford University Press, 2010.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="38C96D4D" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[8] S. Hauck and A. DeHon, Eds., Reconfigurable Computing: The Theory and Practice of FPGA-Based Computation. Morgan Kaufmann, 2008.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2272F9E4" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[9] T. A. Welch, “A technique for high-performance data compression,” Computer, vol. 17, no. 6, pp. 8–19, 1984.</w:t>
+      </w:r>
+    </w:p>
+    <w:p w14:paraId="2FE96E48" w14:textId="77777777" w:rsidR="00B539AB" w:rsidRPr="00186B6C" w:rsidRDefault="00000000">
+      <w:pPr>
+        <w:spacing w:after="80"/>
+        <w:ind w:left="400" w:hanging="400"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00186B6C">
+        <w:rPr>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>[10] L. P. Deutsch, “DEFLATE compressed data format specification version 1.3,” RFC 1951, IETF, 1996.</w:t>
+      </w:r>
+    </w:p>
+    <w:sectPr w:rsidR="00B539AB" w:rsidRPr="00186B6C">
+      <w:headerReference w:type="default" r:id="rId12"/>
+      <w:footerReference w:type="default" r:id="rId13"/>
+      <w:pgSz w:w="12240" w:h="15840"/>
+      <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+      <w:cols w:space="720"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+  </w:body>
+</w:document>

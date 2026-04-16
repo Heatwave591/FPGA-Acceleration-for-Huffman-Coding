@@ -1,0 +1,83 @@
+Edit 1
+
+Pg 1
+Electronics -> Electrical
+	Done
+
+Spell FPGA out
+	Done
+
+Add names of committee members
+	Done
+
+SMART objectives format
+	rewrote in 5 points showing SMART objectives
+
+Pg 3
+subsection space
+	fixed single line spacing
+
+Fig numbers wrong
+	Renumbered by moving algo flowchart to top
+
+Pg 7
+clarity on text
+	Added figure references pointing to diff. scenarios
+
+Delete para
+	Done
+
+Pg 10
+Specify "three cases"
+	Added the cases highly sparse, moderate and dense for clarity
+
+Spell out RTL
+	Spelled Register Transfer Level
+
+Duplicate paragraph
+	Deleted in Pg 10. left in Pg 12
+
+
+Pg 11
+Delete paragraphs
+	Done
+
+Add reference
+	No reference to be added, it is defined by myself
+
+Spell out LLM
+	Spelled out Large Language Model
+
+Pg 13
+Table to define 
+	Does not refer to a table in the report, but a table created real time while the code is running to store symbols.
+
+
+
+Edit 2
+Pg 1
+References
+	Added Data compression paper and Huffman original paper
+
+Pg 2
+Semester
+	Added Spring 2026 in parenthesis
+
+Pg 7
+in -> shown in
+	Changed
+Shows -> show
+	Changed
+
+Pg 11
+Reference for highly sparse and other cases
+	Self defined. So Added explanation of what terms mean in a new paragraph. Also added citation to show explanation
+
+Pg 12
+GPT2 Model
+	Spelled it out and added a point explaining what it is and cited the original paper
+
+Pg 13
+Indicate what table I am referring to
+	tables referred here are used in the code. So, it is not pointing to any table in the report. So, added table names as seen in the source code
+	Added references to table 1 and 2 when summarizing result
