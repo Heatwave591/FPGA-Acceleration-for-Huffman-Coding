@@ -126,5 +126,4 @@ No RTL modifications are required between scenarios — swap the `.svh` file and
 ## Author
 
 **Anirudhhan Raghuraman**
-Masters in Electrical and Computer Engineering, The Ohio State University
-AI EDGE — NSF Institute for Future Edge Networks and Distributed Intelligence
+Masters in Electrical and Computer Engineering, The Ohio State University, AI EDGE NSF
